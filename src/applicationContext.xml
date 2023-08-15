@@ -3,10 +3,14 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd ">
 
-	<bean id = "miEmpleado" class = "com.belenaprende.IoC.JefeEmpleado">
+	<bean id = "miEmpleado" class = "com.belenaprende.IoC.DirectorEmpleado"></bean>
+	
+	
+	<bean id = "miInforme" class = "com.belenaprende.IoC.UsoInformes">
 
+<!-- hay que crear el motor generador de beans. el id es un alias  -->
 
-
+	
 	</bean>
 
 </beans>

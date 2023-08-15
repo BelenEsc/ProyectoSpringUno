@@ -28,13 +28,23 @@ public class UsoEmpleados {
 		// el segundo argumento es la interface
 
 		IEmpleado Juan = (IEmpleado) contexto.getBean("miEmpleado", IEmpleado.class);
-		
-		//usar el bean
+
+		// usar el bean
 		System.out.println(Juan.getTareas());
-		
-		//Cerrar el xml cuando se termina de usar el bean 
-		
+
+		// Cerrar el xml cuando se termina de usar el bean
+
 		contexto.close();
+
+		ICreacionInformes director = (ICreacionInformes) contexto.getBean("miDirecto", ICreacionInformes.class);
+
+		// usar el bean
+		System.out.println(director.getInforme());
+
+		// Cerrar el xml cuando se termina de usar el bean
+
+		contexto.close();
+
 	}
 
 }

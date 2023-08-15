@@ -1,7 +1,5 @@
 package com.belenaprende.IoC;
 
-public interface IEmpleado {
-	public String getTareas();
-
+public interface ICreacionInformes {
 	public String getInforme();
 }
