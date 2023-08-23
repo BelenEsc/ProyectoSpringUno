@@ -27,20 +27,21 @@ public class UsoEmpleados {
 		// alias, que es el id con el que se guardo en el archivo xml
 		// el segundo argumento es la interface
 
-		IEmpleado Juan = (IEmpleado) contexto.getBean("miEmpleado", IEmpleado.class);
+//		IEmpleado Juan = (IEmpleado) contexto.getBean("miEmpleado", IEmpleado.class);
+//
+//		// usar el bean
+//		System.out.println(Juan.getTareas());
+//		System.out.println(Juan.getInforme());
+
+		SecretarioEmpleado Maria = (SecretarioEmpleado) contexto.getBean("miSecretarioEmpleado",
+				SecretarioEmpleado.class);
 
 		// usar el bean
-		System.out.println(Juan.getTareas());
+		System.out.println(Maria.getTareas());
+		System.out.println(Maria.getInforme());
 
-		// Cerrar el xml cuando se termina de usar el bean
-
-		contexto.close();
-
-		ICreacionInformes director = (ICreacionInformes) contexto.getBean("miDirecto", ICreacionInformes.class);
-
-		// usar el bean
-		System.out.println(director.getInforme());
-
+		System.out.println(Maria.getEmail());
+		System.out.println(Maria.getNombreEmpresa());
 		// Cerrar el xml cuando se termina de usar el bean
 
 		contexto.close();

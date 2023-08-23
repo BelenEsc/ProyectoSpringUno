@@ -18,21 +18,8 @@
 	<bean id="miInforme" class="com.belenaprende.IoC.UsoInformes"></bean>
 
 	<bean id="miEmpleado"
-		class="com.belenaprende.IoC.DirectorEmpleado"> <!-- poner aqui la clase que ha sido inyectada -->
+		class="com.belenaprende.IoC.DirectorEmpleado" init-method="metodoInicial" destroy-method="metodoFinal"> <!-- poner aqui la clase que ha sido inyectada -->
 		<constructor-arg ref="miInforme"></constructor-arg>
 	</bean>
-
-	<bean id="miSecretarioEmpleado"
-		class="com.belenaprende.IoC.SecretarioEmpleado">
-		<property name="informeNuevo" ref="miInforme"></property> <!-- en el name tiene que ir el nombre del metodo que recibe por argumento 
-			el objeto de la interface que va a inyectarse pero sin set y la primera letra 
-			del nombre es minusculas -->
-
-		<property name="email" value="${email}"></property> <!-- lo mismo que arriba para el nombre, el metodo sin set y con minusculas 
-			y aqui el value es el valor que se le da a la variable que es un valor que 
-			va a ser propio del objeto, o sea no es algo que se pueda indivizualizar -->
-		<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
-	</bean>
-
 
 </beans>
